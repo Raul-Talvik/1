@@ -1,0 +1,64 @@
+@echo off
+
+A:
+echo ====================
+echo     PEI Home
+echo ====================
+
+echo     Welcome!
+
+echo ===================
+echo     Services
+echo ===================
+
+echo 1. Filing System
+echo 2. Patch Logs
+echo 3. Personalisation
+
+set /p choice=What will you choose?
+
+if "%choice%"=="1" goto :error1
+if "%choice%"=="2" goto :patch
+if "%choice%"=="3" goto :error1
+
+
+
+
+
+
+:error1
+echo ====================
+echo      Error 1
+echo ====================
+
+echo  We're Very Sorry!
+echo This service is not available yet.
+pause
+cls
+goto :A
+
+
+
+
+
+:patch
+echo =====================
+echo     Patch Logs
+echo =====================
+
+echo --------------------------------
+echo Version: Pre-release a1
+echo Date: September 20th 2026
+echo --------------------------------
+
+echo       Patch Notes
+echo =====================================================================
+echo Started working on releasing Pre-release snapshot: a1.1
+echo Implementing a personalisation service with full functionality.
+echo Implementing a working file system service with full functionality
+echo Released the mockup for PEI Pre-release a1
+echo Fixing bugs in the obfuscational code
+echo =====================================================================
+pause
+cls
+goto :A
