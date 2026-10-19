@@ -1,0 +1,105 @@
+@echo off
+
+cls
+:start
+echo ====================
+echo     PEI Home
+echo ====================
+
+echo     Welcome!
+
+echo ===================
+echo     Services
+echo ===================
+
+echo 1. Filing System
+echo 2. Patch Logs
+echo 3. Personalisation
+
+set /p choice=What will you choose?
+
+if "%choice%"=="1" goto :error1
+if "%choice%"=="2" goto :patch
+if "%choice%"=="3" goto :Personalisation
+
+:Personalisation
+cls
+echo ==========================
+echo    Personalisation
+echo ==========================
+echo *Default Color Is Green*
+
+echo 0 – Black
+echo 1 – Blue
+echo 2 – Reset To Default
+echo 3 – Aqua
+echo 4 – Red
+echo 5 – Purple
+echo 6 – Yellow
+echo 7 – White
+echo 8 – Gray
+echo 9 – Light Blue
+echo 10 – Light Green
+echo 11 – Light Aqua
+echo 12 – Light Red
+echo 13 – Light Purple
+echo 14 – Light Yellow
+echo 14 – Bright White
+
+set /p choice=What color text would you like?
+
+if "%choice%"=="1" color 0
+if "%choice%"=="2" color 1
+if "%choice%"=="3" color 2
+if "%choice%"=="4" color 3
+if "%choice%"=="5" color 4
+if "%choice%"=="6" color 5
+if "%choice%"=="7" color 6
+if "%choice%"=="8" color 7
+if "%choice%"=="9" color 8
+if "%choice%"=="10" color 9
+if "%choice%"=="11" color A
+if "%choice%"=="12" color B
+if "%choice%"=="13" color C
+if "%choice%"=="14" color D
+if "%choice%"=="15" color E
+if "%choice%"=="15" color F
+goto :start
+
+:error1
+cls
+echo ====================
+echo      Error 1
+echo ====================
+
+echo  We're Very Sorry!
+echo This service is not available yet.
+pause
+cls
+goto :start
+
+
+
+
+
+:patch
+echo =====================
+echo     Patch Logs
+echo =====================
+
+echo --------------------------------
+echo Version: Pre-release a1.1
+echo Date: October 14th 2026
+echo --------------------------------
+
+echo       Patch Notes
+echo =====================================================================
+echo Started working on releasing Pre-release snapshot: a1.2
+echo Added personalisation system, including hex algorithm.
+echo Implementing a working file system service with full functionality
+echo Released the mockup for PEI Pre-release a1
+echo 
+echo =====================================================================
+pause
+cls
+goto :start
